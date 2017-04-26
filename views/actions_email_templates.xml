@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="action_email_template" model="mail.template">
+            <field name="name">Pendent Action Lead</field>
+            <field name="email_from">${object.user_id and object.user_id.login or ''}</field>
+            <field name="subject">Action to do: ${object.name}</field>
+            <field name="email_to">${object.user_id.email|safe}</field>
+            <field name="lang">${object.lang}</field>
+            <field name="model_id" ref="actions.model_crm_action_lead"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+	          <p>Dear ${(object.user_id.name)},<br/><br/>
+		  Remember the action to do on ${object.lead_id}<br/>
+		  Details:<br/>
+		  ${(object.details)}<br/></p>
+                  Regards,<br/>
+                  ${(object.user_id.name)}
+	    ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

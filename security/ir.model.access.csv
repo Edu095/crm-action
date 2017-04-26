@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_action_lead,access_crm_action_lead,model_crm_action_lead,,1,1,1,1
+access_crm_action_types,access_crm_action_types,model_crm_action_types,,1,1,1,1

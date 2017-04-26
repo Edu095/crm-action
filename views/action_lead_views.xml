@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="action_lead_form_view">
+            <field name="name">action.lead</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <page name="extra" position="inside">
+                    <group string="Actions">
+                        <field mode="tree" name="action_lead_ids" nolabel="1">
+                            <tree decoration-info="state=='done'" decoration-danger="state=='draft'">
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="date"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </field>
+        </record>
+    </data>
+</odoo>

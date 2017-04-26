@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_crm_action_user" model="res.groups">
+            <field name="name">CRM Action User</field>
+            <field name="category_id" ref="base.module_category_customer_relationship_management"/>
+        </record>
+
+        <record id="group_crm_action_manager" model="res.groups">
+            <field name="name">CRM Action Manager</field>
+            <field name="category_id" ref="base.module_category_customer_relationship_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group_crm_action_user'))]"/>
+        </record>
+
+        <record id="base.group_sale_salesman" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('group_crm_action_user'))]"/>
+        </record>
+        <!-- CSV file OCA -->
+        <!--
+        access_crm_action_user,crm.action.user,model_crm_action_lead,group_crm_action_user,1,1,1,0
+        access_crm_action_manager,crm.action.manager,model_crm_action_lead,group_crm_action_manager,1,1,1,1
+        access_crm_action_type_user,crm.action.type.user,model_crm_action_types,group_crm_action_user,1,0,0,0
+        access_crm_action_type_manager,crm.action.type.manager,model_crm_action_types,group_crm_action_manager,1,1,1,1
+        -->
+    </data>
+</odoo>

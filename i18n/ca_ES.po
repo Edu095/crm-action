@@ -1,0 +1,350 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* actions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-25 11:18+0000\n"
+"PO-Revision-Date: 2017-04-25 13:35+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ca_ES\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: actions
+#: model:mail.template,body_html:actions.action_email_template
+msgid ""
+"\n"
+"                \n"
+"\t          <p>Dear ${(object.user_id.name)},<br/><br/>\n"
+"\t\t  Remember the action to do on ${object.lead_id}<br/>\n"
+"\t\t  Details:<br/>\n"
+"\t\t  ${(object.details)}<br/></p>\n"
+"                  Regards,<br/>\n"
+"                  ${(object.user_id.name)}\n"
+"\t    \n"
+"            "
+msgstr ""
+"\n"
+"                \n"
+"\t          <p>Benvolgut ${(object.user_id.name)},<br/><br/>\n"
+"\t\t  Recorda que tens una acció que realitzar sobre ${object.lead_id}<br/>\n"
+"\t\t  Detalls:<br/>\n"
+"\t\t  ${(object.details)}<br/></p>\n"
+"                  Salutacions,<br/>\n"
+"                  ${(object.user_id.name)}\n"
+"\t    \n"
+"            "
+
+#. module: actions
+#: model:ir.actions.server,body_html:actions.id_actions_server_send_email
+msgid ""
+"<p>Dear ${(object.user_id.name)},<br><br>\n"
+"\t\t  Remember the action to do on ${object.lead_id}<br>\n"
+"\t\t  Details:<br>\n"
+"\t\t  ${(object.details)}<br></p>\n"
+"                  Regards,<br>\n"
+"                  ${(object.user_id.name)}\n"
+"\t    \n"
+"            "
+msgstr ""
+"<p>Benvolgut ${(object.user_id.name)},<br><br>\n"
+"\t\t  Recorda que tens una acció a realitzar sobre ${object.lead_id}<br>\n"
+"\t\t  Detalls:<br>\n"
+"\t\t  ${(object.details)}<br></p>\n"
+"                  Salutacions,<br>\n"
+"                  ${(object.user_id.name)}\n"
+"\t    \n"
+"            "
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+msgid "Action"
+msgstr "Acció"
+
+#. module: actions
+#: code:addons/actions/models/action_lead.py:10
+#: code:addons/actions/models/actions.py:9
+#: model:ir.model,name:actions.model_crm_action_lead
+#: model:ir.model.fields,field_description:actions.field_crm_lead_action_lead_ids
+#, python-format
+msgid "Action Lead"
+msgstr "Acció sobre Iniciativa"
+
+#. module: actions
+#: code:addons/actions/models/actions.py:17
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_action_type
+#, python-format
+msgid "Action Type"
+msgstr "Tipus d'acció"
+
+#. module: actions
+#: code:addons/actions/models/actions_types.py:8
+#: model:ir.actions.act_window,name:actions.action_types_list_action
+#: model:ir.model,name:actions.model_crm_action_types
+#: model:ir.ui.menu,name:actions.menu_sub_sales_action_types
+#, python-format
+msgid "Action Types"
+msgstr "Tipus d'accions"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.action_types_form_view
+msgid "Action Types Form"
+msgstr "Action Types Form"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.action_types_tree_view
+msgid "Action Types Tree"
+msgstr "Action Types Tree"
+
+#. module: actions
+#: model:ir.actions.server,subject:actions.id_actions_server_send_email
+#: model:mail.template,subject:actions.action_email_template
+msgid "Action to do: ${object.name}"
+msgstr "Accions pendents: ${object.name}"
+
+#. module: actions
+#: code:addons/actions/wizard/action_lead_wizard.py:14
+#: model:ir.actions.act_window,name:actions.actions_list_action
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard_action_ids
+#: model:ir.ui.menu,name:actions.menu_sub_sales_actions
+#: model:ir.ui.view,arch_db:actions.action_lead_form_view
+#, python-format
+msgid "Actions"
+msgstr "Accions"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_calendar_view
+msgid "Actions Calendar"
+msgstr "Calendari d'accions"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_form_view
+msgid "Actions Form"
+msgstr "Actions Form"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_tree_view
+msgid "Actions Tree"
+msgstr "Actions Tree"
+
+#. module: actions
+#: code:addons/actions/models/actions_types.py:12
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_active
+#, python-format
+msgid "Active"
+msgstr "Actiu"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.wizard_form_view
+msgid "Add Action"
+msgstr "Afegeix acció"
+
+#. module: actions
+#: model:ir.actions.act_window,name:actions.launch_action_wizard
+#: model:ir.ui.view,arch_db:actions.wizard_form_view
+msgid "Add Actions"
+msgstr "Afegeix accions"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.wizard_form_view
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_create_uid
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_create_uid
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard_create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_create_date
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_create_date
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard_create_date
+msgid "Created on"
+msgstr "Creat el"
+
+#. module: actions
+#: code:addons/actions/models/actions.py:16
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_user_id
+#, python-format
+msgid "Creator"
+msgstr "Creador"
+
+#. module: actions
+#: code:addons/actions/models/actions.py:14
+#, python-format
+msgid "Date"
+msgstr "Data"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_date
+msgid "Date Limit"
+msgstr "Data limit"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_details
+msgid "Details"
+msgstr "Detalls"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_display_name
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_display_name
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard_display_name
+msgid "Display Name"
+msgstr "Mostrar Nom"
+
+#. module: actions
+#: code:addons/actions/models/actions.py:21 selection:crm.action.lead,state:0
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+#, python-format
+msgid "Done"
+msgstr "Fet"
+
+#. module: actions
+#: selection:crm.action.lead,state:0
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+msgid "Draft"
+msgstr "Esborrany"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_form_view
+msgid "Extra"
+msgstr "Extra"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+msgid "Group By"
+msgstr "Agrupar per"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_id
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_id
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_form_view
+msgid "Info"
+msgstr "Informació"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead___last_update
+#: model:ir.model.fields,field_description:actions.field_crm_action_types___last_update
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard___last_update
+msgid "Last Modified on"
+msgstr "Última modificació el "
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_write_uid
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_write_uid
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Última actualització per"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_write_date
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_write_date
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard_write_date
+msgid "Last Updated on"
+msgstr "Última actualització el"
+
+#. module: actions
+#: code:addons/actions/models/actions.py:12
+#: code:addons/actions/wizard/action_lead_wizard.py:12
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_lead_id_4883
+#: model:ir.model.fields,field_description:actions.field_crm_action_wizard_lead_id
+#, python-format
+msgid "Lead"
+msgstr "Iniciativa"
+
+#. module: actions
+#: model:ir.model,name:actions.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunitat"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_form_view
+msgid "Mark as done"
+msgstr "Marca com fet"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+msgid "My Actions"
+msgstr "Les meves accions"
+
+#. module: actions
+#: code:addons/actions/models/actions.py:11
+#: code:addons/actions/models/actions_types.py:10
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_name
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_name
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: actions
+#: code:addons/actions/models/actions.py:13
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_partner_id
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+#, python-format
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: actions
+#: code:addons/actions/models/actions.py:20
+#, python-format
+msgid "Pendent"
+msgstr "Pendent"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_types_priority
+msgid "Priority"
+msgstr "Prioritat"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_form_view
+msgid "Reset to draft"
+msgstr "Tornar a esborrany"
+
+#. module: actions
+#: model:ir.actions.server,name:actions.id_actions_server_send_email
+msgid "Send email if action is draft"
+msgstr "Envia email si l'acció esta pendent"
+
+#. module: actions
+#: model:ir.model.fields,field_description:actions.field_crm_action_lead_state
+msgid "State"
+msgstr "Estat"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+msgid "To do today"
+msgstr "Per fer avui"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+msgid "User"
+msgstr "Usuari"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.actions_search_view
+msgid "Week"
+msgstr "Setmana"
+
+#. module: actions
+#: model:ir.model,name:actions.model_crm_action_wizard
+msgid "crm.action.wizard"
+msgstr "crm.action.wizard"
+
+#. module: actions
+#: model:ir.ui.view,arch_db:actions.wizard_form_view
+msgid "or"
+msgstr "o"

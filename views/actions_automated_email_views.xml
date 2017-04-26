@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="id_actions_server_send_email" model="ir.actions.server">
+            <field name="name">Send email if action is draft</field>
+            <field name="model_id" ref="model_crm_action_lead"/>
+            <field name="state">email</field>
+            <field name="type">ir.actions.server</field>
+            <field name="template_id" ref="action_email_template"/>
+            <field name="sequence">1</field>
+            <field name="condition">object.state == 'draft'</field>
+        </record>
+        <record id="id_automated_action_server" model="base.action.rule">
+            <field name="name">Auto-email 3 days in advance</field>
+            <field name="model_id" ref="model_crm_action_lead"/>
+            <field name="active">1</field>
+            <field name="sequence">1</field>
+            <field name="kind">on_time</field>
+            <field name="trg_date_id" ref="field_crm_action_lead_date"/>
+            <field name="trg_date_range">-3</field>
+            <field name="trg_date_range_type">day</field>
+            <field name="server_action_ids" eval="[(6,0,[ref('id_actions_server_send_email')])]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<!-- Form views -->
+        <!-- Action Types -->
+        <record model="ir.ui.view" id="action_types_form_view">
+            <field name="name">action.types.form</field>
+            <field name="model">crm.action.types</field>
+            <field name="arch" type="xml">
+                <form string="Action Types Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="priority"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!-- List views -->
+        <!-- Action Types -->
+        <record model="ir.ui.view" id="action_types_tree_view">
+            <field name="name">action.types.tree</field>
+            <field name="model">crm.action.types</field>
+            <field name="arch" type="xml">
+                <tree string="Action Types Tree">
+                    <field name="name"/>
+                    <field name="priority"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+<!-- Action window -->
+        <!-- Action Type -->
+        <record model="ir.actions.act_window" id="action_types_list_action">
+            <field name="name">Action Types</field>
+            <field name="res_model">crm.action.types</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!-- Menus -->
+        <!-- Action Types -->
+        <menuitem name="Action Types" id="menu_sub_sales_action_types"
+                  parent="sales_team.menu_sale_config"
+                  action="action_types_list_action" sequence="2"/>
+    </data>
+</odoo>

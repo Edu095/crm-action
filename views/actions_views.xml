@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Form views -->
+        <!-- Actions -->
+        <record model="ir.ui.view" id="actions_form_view">
+            <field name="name">actions.form</field>
+            <field name="model">crm.action.lead</field>
+            <field name="arch" type="xml">
+                <form string="Actions Form">
+                    <header>
+                        <button name="draft" type="workflow"
+                                string="Reset to draft"
+                                states="done"/>
+                        <button name="done" type="workflow"
+                                string="Mark as done" states="draft"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <h2>
+                            <field name="name"/>
+                        </h2>
+                        <group string="Info">
+                            <group>
+                                <field name="lead_id"/>
+                                <field name="partner_id"/>
+                                <field name="date"/>
+                            </group>
+                            <group>
+                                <field name="action_type"/>
+                                <field name="user_id"/>
+                            </group>
+                        </group>
+                        <group string="Extra">
+                            <field name="details"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List views -->
+        <!-- Actions -->
+        <record model="ir.ui.view" id="actions_tree_view">
+            <field name="name">actions.tree</field>
+            <field name="model">crm.action.lead</field>
+            <field name="arch" type="xml">
+                <tree string="Actions Tree">
+                    <field name="name"/>
+                    <field name="lead_id"/>
+                    <field name="partner_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Calendar view -->
+        <record model="ir.ui.view" id="actions_calendar_view">
+            <field name="name">actions.calendar</field>
+            <field name="model">crm.action.lead</field>
+            <field name="arch" type="xml">
+                <calendar string="Actions Calendar"
+                          date_start="date"
+                          color="action_type">
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
+
+        <!-- Search view -->
+        <record model="ir.ui.view" id="actions_search_view">
+            <field name="name">actions.search</field>
+            <field name="model">crm.action.lead</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="lead_id"/>
+                    <field name="partner_id"/>
+                    <field name="date"/>
+                    <field name="user_id"/>
+
+                    <filter name="my_actions" string="My Actions"
+                            domain="[('user_id', '=', uid)]"/>
+                    <filter name="draft" string="Draft"
+                            domain="[('state', '=', 'draft')]"/>
+                    <filter name="done" string="Done"
+                            domain="[('state', '=', 'done')]"/>
+                    <filter name="to_do" string="To do today"
+                            domain="[('date', '=', (context_today().strftime('%Y-%m-%d')))]"/>
+
+                    <group string="Group By">
+                        <filter name="by_partner" string="Partner"
+                                context="{'group_by': 'partner_id'}"/>
+                        <filter name="by_user" string="User"
+                                context="{'group_by': 'user_id'}"/>
+                        <filter name="by_action" string="Action"
+                                context="{'group_by': 'action_type'}"/>
+                        <filter name="by_week" string="Week"
+                                context="{'group_by': 'date:week'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action window -->
+        <!-- Action Lead -->
+        <record model="ir.actions.act_window" id="actions_list_action">
+            <field name="name">Actions</field>
+            <field name="res_model">crm.action.lead</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="context" eval="{'search_default_my_actions': 1}"/>
+        </record>
+
+        <!-- Menus -->
+        <!-- Action Lead -->
+        <menuitem name="Actions" id="menu_sub_sales_actions"
+                  parent="sales_team.menu_sales"
+                  action="actions_list_action" sequence="2"/>
+    </data>
+</odoo>
